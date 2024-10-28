@@ -1,0 +1,299 @@
+
+
+.modelOverlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+  }
+  .modelDiv{
+    z-index: 1;
+    width: 320px;
+    height: 320px;
+    position: fixed;
+    left: 50%;
+    top: -500px;
+    transition: 0.5s;
+    transform: translate(-50%, -50%);
+    background-color: #375a7f;
+  }
+  
+  .modelDiv h1{
+    padding-top: 30px;
+    float: left;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .en{
+    position: fixed;
+    right: -30px;
+    transform: rotate(90deg);
+    top: 150px;
+  }
+  
+  .modelShow{
+    display: block;
+  }
+  .modelDivShow{
+    top: 50%;
+  }
+  
+  .logout{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Container styles */
+.container1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 200px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Container2 styles for buttons */
+.container2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Button styles */
+.btn1 {
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  /* padding: 15px 30px; */
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  width: 90px;
+  height: 50px;
+  text-align: center;
+  padding-top: 13px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container1 {
+    font-size: 30px;
+    margin-top: 200px;
+  }
+
+  .btn1 {
+    background-color: blue;
+  color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container1{
+    font-size: 24px;
+    margin-top: 200px;
+  }
+
+  .container2 {
+    /* flex-direction: column;1 */
+    align-items: center;
+  }
+
+  .btn1 {
+    background-color: blue;
+    color: white;
+  font-size: 15px;
+  width: 90px;
+  height: 50px;
+  text-align: center;
+  padding-top: 13px;
+  }
+}
+
+
+
+
+/* Ensure body and html take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Responsive card container */
+
+/* Navbar and logout button styling */
+.navbar, .logout {
+  margin: 10px;
+}
+
+/* Override Bootstrap classes if necessary */
+@media (max-width: 986px) {
+  .nav-ul {
+    width: 100px;
+  }
+  .nav-link{
+    width: 100px;
+  }
+  .nav-home{
+    width: 105px;
+    flex-basis: 0%;
+    padding-top: 5px;
+  }
+  .nav-item{
+    width: 100px;
+  }
+}
+
+
+
+/* interface social media  */
+
+
+
+.ul1{
+  opacity: 0.8;
+  margin-right: 50px;
+  margin-top: 130px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.li1{
+  list-style: none;
+  display: inline-block;
+  font-size: 23px;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.instagram{
+  border: 2px solid #ff0095;
+  color: #c72b7e;
+}
+
+.twitter{
+  border: 2px solid #1c9ff1;
+  color: #1c9ff1;
+}
+
+.youtube{
+  border: 2px solid #ff0000;
+  color: #ff0000;
+}
+
+.facebook{
+  border: 2px solid #0679e6;
+  color: #0679e6;
+}
+
+
+/* #####################  Hover EFFECTS ############################# */
+
+.icon{
+  transition: 0.6s;
+}
+
+li:hover .icon1{
+  transform: rotateY(360deg);
+  text-shadow: 0px 0px 1px #ff0095;
+}
+
+li:hover .icon2{
+  transform: rotateY(360deg);
+  text-shadow: 0px 0px 1px #1c9ff1;
+}
+
+li:hover .icon3{
+  transform: rotateY(360deg);
+  text-shadow: 0px 0px 1px #ff0000;
+}
+
+li:hover .icon4{
+  transform: rotateY(360deg);
+  text-shadow: 0px 0px 1px #0679e6;
+}
+
+li{
+  transition: 0.4s;
+  transition-delay: 0.2s;
+}
+
+.instagram:hover{
+  box-shadow: 0px 0px 7px #ff0095 inset,
+              0px 0px 7px #ff0095;
+}
+
+.twitter:hover{
+  box-shadow: 0px 0px 7px #1c9ff1 inset,
+              0px 0px 7px #1c9ff1;
+}
+
+.youtube:hover{
+  box-shadow: 0px 0px 7px #ff0000 inset,
+              0px 0px 7px #ff0000;
+}
+
+.facebook:hover{
+  box-shadow: 0px 0px 7px #0679e6 inset,
+              0px 0px 7px #0679e6;
+}
+
+.main-container{
+  height: 100vh;
+  background-image: url("./images/admission_block.jpg");
+  background-size: 100% cover;
+  background-position: center;
+}
+
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.password-container {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.loading-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure the spinner is above other elements */
+}
