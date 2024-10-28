@@ -7,7 +7,7 @@ const db = require('./mongoose');
 
 const allowedOrigins = [
   'http://localhost:3000', 
-  'https://pu-resources.vercel.app'
+  'https://poornima-resources.vercel.app'
 ];
 
 const corsOptions = {
