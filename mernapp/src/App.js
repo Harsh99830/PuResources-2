@@ -13,10 +13,10 @@ export default function App() {
 
   const loadData = async () => {
     setLoading(true); // Set loading to true when fetching data
-    let response = await fetch("https://pu-resources-backend.onrender.com/api/Data", {
+    let response = await fetch("https://poornima-resources.vercel.app/api/Data", {
       method: "POST",
       headers: {
-        "content-type": "application/json"
+        "Content-type": "application/json"
       }
     });
     response = await response.json();
