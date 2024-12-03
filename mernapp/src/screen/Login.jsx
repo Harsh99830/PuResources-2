@@ -15,6 +15,7 @@ export default function Login() {
         setLoading(true);  // Start loading
 
         const response = await fetch("https://pu-resources-backend.onrender.com/api/loginuser", {
+            mode: 'no-cors',
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
