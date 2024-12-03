@@ -1,40 +1,44 @@
 const express = require('express');
-require("dotenv").config();
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 5000;
-const db = require('./mongoose');
+const port = 5000; // Hardcoded port
+const db = require('./mongoose'); // Ensure your MongoDB connection is properly set up
 
+// Allowed origins for CORS
 const allowedOrigins = [
   'http://localhost:3000', 
   'https://poornima-resources.vercel.app'
 ];
 
+// CORS options
 const corsOptions = {
   origin: (origin, callback) => {
+    console.log(`Incoming origin: ${origin}`); // Log the origin for debugging
     if (allowedOrigins.includes(origin) || !origin) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true,
+  credentials: true, // Enable credentials for cookies and headers
 };
 
-app.use(cors(corsOptions));
+// Middleware
+app.use(cors(corsOptions)); // Apply CORS settings globally
+app.options('*', cors(corsOptions)); // Handle preflight requests
 
+app.use(express.json()); // Parse JSON requests
+
+// Routes
 app.get('/', (req, res) => {
-  res.send('hello world');
+  res.send('Hello World');
 });
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('build'));
-}
+// API Routes
+app.use('/api', require('./CreateUser')); // Ensure CreateUser module is exporting a router
+app.use('/api', require('./DisplayData')); // Ensure DisplayData module is exporting a router
 
-app.use(express.json());
-app.use('/api', require('./CreateUser'));
-app.use('/api', require('./DisplayData'));
-
+// Start the server
 app.listen(port, () => {
-  console.log(`listening to the port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
