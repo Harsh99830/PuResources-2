@@ -14,7 +14,7 @@ export default function Login() {
         event.preventDefault();
         setLoading(true);  // Start loading
 
-        const response = await fetch("https://pu-resources-backend.onrender.com/api/loginuser", {
+        const response = await fetch("https://pu-resources-api.vercel.app/api/loginuser", {
             mode: 'no-cors',
             method: 'POST',
             headers: {

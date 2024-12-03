@@ -14,7 +14,7 @@ export default function Signup() {
         event.preventDefault();
         setLoading(true);  // Start loading
 
-        const response = await fetch("https://pu-resources-backend.onrender.com/api/createuser", {
+        const response = await fetch("https://pu-resources-api.vercel.app/api/createuser", {
             mode: 'no-cors',
             method: 'POST',
             headers: {
