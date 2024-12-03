@@ -14,7 +14,7 @@ export default function Signup() {
         event.preventDefault();
         setLoading(true);  // Start loading
 
-        const response = await fetch("https://pu-resourcess.vercel.app/api/createuser", {
+        const response = await fetch("http://localhost:5000/api/createuser", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
