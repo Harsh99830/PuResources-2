@@ -7,7 +7,7 @@ const db = require('./mongoose'); // Ensure your MongoDB connection is properly 
 // Allowed origins for CORS
 app.use(cors(
   {
-    origin: ["https://poornima-resources.vercel.app/"],
+    origin: ["https://poornima-resources.vercel.app"],
     methods: ["POST","GET"],
     credentials:true
   }

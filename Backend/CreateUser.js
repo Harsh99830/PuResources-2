@@ -5,9 +5,9 @@ require('dotenv').config();
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const jwtSecret = process.env.JWT_SECRET;
+const jwtSecret = process.env.JWT_SECRET || "default_secret_key"
 
-router.post('/createuser', [
+router.post('/api/createuser', [
   body('email', 'Enter the valid Email Id').isEmail(),
   body('name').isLength({ min: 2 }),
   body('password', 'Enter the valid password').isLength({ min: 6 }),
@@ -39,7 +39,7 @@ router.post('/createuser', [
   }
 });
 
-router.post('/loginuser', [
+router.post('/api/loginuser', [
   body('email', 'Enter the valid Email Id').isEmail(),
   body('password', 'Enter the valid password').isLength({ min: 6 }),
 ], async (req, res) => {
